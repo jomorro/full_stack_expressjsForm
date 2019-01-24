@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
 </head>
+
 <body>
     <form id="user-create-form" action="./api/user" method="post">
-        
-        <!-- Add user input fields here -->
+        <fieldset>
+            <legend>Create a new user</legend>
 
-        <button type="submit">Create User</button>
+            <!-- Add user input fields here -->
+            <p>
+                <label for="email">email address</label>
+                <input type="email" name="email" id="email" placeholder="email address">
+            </p>
+
+            <p>
+                <label for="username">username</label>
+                <input type="text" name="username" id="username" placeholder="username">
+            </p>
+
+            <p>
+                <label for="zip-code">zip code</label>
+                <input type="text" name="zip-code" id="zip-code" placeholder="zip code">
+            </p>
+
+            <p>
+                <label for="fav-color">favorite color</label>
+                <input type="text" name="fav-color" id="fav-color" placeholder="favorite color">
+            </p>
+
+            <button type="submit">Create User</button>
+        </fieldset>
+
     </form>
+
+    <p id="submission-status"></p>
+
+    <script src="index.js"></script>
 </body>
+
 </html>
